@@ -38,7 +38,7 @@ Use at your own risk
 """;
 
   void _login() {
-    launchUrl(Uri.parse(const String.fromEnvironment("REDIRECT_URL")));
+    launchUrl(Uri.parse("${window.location.origin}/auth"));
   }
 
   @override
