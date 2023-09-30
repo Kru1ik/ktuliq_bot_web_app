@@ -38,12 +38,12 @@ Use at your own risk
 """;
 
   void _login() {
-    launchUrl(Uri.parse("${window.location.origin}/auth"));
+    launchUrl(Uri.parse("${window.location.origin}/auth"), webOnlyWindowName: "_self");
   }
 
   @override
   Widget build(BuildContext context) {
-    if(window.localStorage["token"] != null) {
+    if(window.localStorage["userId"] != null && window.localStorage["token"] != null) {
       return ControlPanel();
     }
 
